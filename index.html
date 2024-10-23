@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Player Data</title>
+</head>
+<body>
+    <h1>Roblox Players</h1>
+    <div id="player-list">
+        <?php
+        // Read the player data from the file
+        if (file_exists("player_data.txt")) {
+            echo nl2br(file_get_contents("player_data.txt"));
+        } else {
+            echo "No data available.";
+        }
+        ?>
+    </div>
+</body>
+</html>
